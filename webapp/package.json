@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-icons": "^1.0.0-alpha3",
+    "bootstrap-vue": "^2.11.0",
     "vue": "^2.6.11",
+    "vue-moment": "^4.1.0",
     "vue-router": "^3.1.6"
   }
 }
