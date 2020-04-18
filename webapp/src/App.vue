@@ -12,10 +12,10 @@ body {
     transform: translate(-50%, -50%);
 }
 .i-border-red {
-    border: 1px solid #DC143C;
+    border: 1px solid hsl(348, 83%, 47%);
 }
 .i-bg-red {
-    background-color: #DC143C;
+    background-color: hsl(348, 83%, 47%);
     color: #fff;
 }
 </style>

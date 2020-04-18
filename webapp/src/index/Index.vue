@@ -45,7 +45,7 @@
     width: 100%;
     height: 50%;
     bottom: 0;
-    background: #DC143C;
+    background: hsl(348, 83%, 47%);
     animation: slideIn 2.5s ease-in-out;
 }
 @keyframes slideIn {
