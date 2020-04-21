@@ -4,6 +4,7 @@
 <style>
 body {
     cursor: default;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .center-middle {
     position: absolute;
