@@ -4,12 +4,12 @@
             <div class="h4 mb-0">Dashboard</div>
             <div class="row my-5">
                 <div class="col-7">
-                    <canvas id="currentECG" width="100" height="25"></canvas>
+                    <canvas id="currentECG" width="100" height="15"></canvas>
                 </div>
                 <div class="col-5">
                     <div class="h3 mb-0">Current Pulse</div>
                     <div>
-                        <span class="display-4">82</span>
+                        <span class="display-4">{{ current }}</span>
                         <span class="ml-4">BPMs</span>
                     </div>
                 </div>
@@ -46,6 +46,7 @@ import Chart from 'chart.js'
 export default {
     data() {
         return {
+            current: null,
             bpm_object: {},
             bpm_array: [],
             bpm_array_seperate: {
@@ -55,13 +56,21 @@ export default {
         }
     },
     created() {
+        let current = {}
         let bpm_object = {}
 
         // Fetch data from Firebase
         let database = firebase.database()
+
+        database.ref('current').once('value').then((snapshot) => {
+            current = snapshot.val()
+        }).then(() => {
+            this.current = current['bpm']
+        })
+
+        // Messurement History log
         database.ref('history').once('value').then((snapshot) => {
             bpm_object = snapshot.val()
-
         }).then(() => {
             
             let bpm_array = []
@@ -70,7 +79,8 @@ export default {
 
             // Convert Object to Array
             for (let log in bpm_object) {
-                bpm_array.push([parseInt(log), bpm_object[log]])
+                let temp_array = Object.values(bpm_object[log])
+                bpm_array.push([parseInt(temp_array[1]), temp_array[0]])
             }
 
             // Sorting Array
@@ -122,15 +132,22 @@ export default {
         })
     },
     mounted() {
+
+        let ecgPulses = new Array(40)
+        // [0, 0, 2, -8, 8, -2, 0, 0]
+        for (let i=0; i<ecgPulses.length; i++) {
+            ecgPulses[i] = 0
+        }
+
         // ECG Pulse in Real-time Panel
         let cecg = document.getElementById('currentECG').getContext('2d');
         new Chart(cecg, {
             type: 'line',
             data: {
-                labels: new Array(50),
+                labels: new Array(40),
                 datasets: [{
                     label: 'ECG',
-                    data: [0, 0, 2, -8, 8, -2, 0, 0],
+                    data: ecgPulses,
                     borderColor: '#FFF',
                     fill: false,
                     lineTension: 0.1,
@@ -143,8 +160,29 @@ export default {
                 title: {
                     display: false
                 },
+                legend: {
+                    display: false
+                },
                 tooltips: {
                     enabled: false
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
+                        }
+                    }]
                 }
             }
         })
