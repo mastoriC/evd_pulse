@@ -105,6 +105,11 @@ export default {
             this.bpm_array.push([bpm_object['timestamp'], bpm_object['bpm']])
             this.bpm_array_seperate.timestamps.push(time2date(bpm_object['timestamp']))
             this.bpm_array_seperate.bpms.push(bpm_object['bpm'])
+            if (this.bpm_array.length > 15) {
+                this.bpm_array.shift()
+                this.bpm_array_seperate.timestamps.shift()
+                this.bpm_array_seperate.bpms.shift()
+            }
             hbpm_chart.update()
         })
 
@@ -162,7 +167,7 @@ export default {
             }
         })
 
-        // Update ecgGraph
+        // Update ecgGraph every 100ms
         const ecgGraph = () => {
             setTimeout(() => {
                 ecgPulses.unshift(this.pulse)
