@@ -4,6 +4,10 @@
 #include <ArduinoWebsockets.h>
 #include <ESP8266WiFi.h>
 
+#include <DNSServer.h>
+#include <ESP8266WebServer.h>
+#include <WiFiManager.h>
+
 #include "heartRate.h"
 
 // Global Variable
@@ -13,8 +17,6 @@ using namespace websockets;
 MAX30105 particleSensor;
 WebsocketsClient client;
 
-#define WIFI_SSID "WIFI_SSID"
-#define WIFI_PASSWORD "WIFI_PASSWORD"
 const char* websockets_server = "wss://api.loukhin.com/evdpulse/";
 
 const byte RATE_SIZE = 4;
@@ -46,13 +48,9 @@ void setup() {
   pinMode(BUILTIN_LED, OUTPUT);
   digitalWrite(BUILTIN_LED, 1);
 
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  Serial.print("Connecting to Wi-Fi");
-  while (WiFi.status() != WL_CONNECTED) {
-    Serial.print(".");
-    delay(300);
-  }
-  Serial.println();
+  WiFiManager wifiManager;
+  Serial.println("Connecting to Wi-Fi...");
+  wifiManager.autoConnect("EVDPulse");
   Serial.print("Connected with IP: ");
   Serial.println(WiFi.localIP());
   Serial.println();
