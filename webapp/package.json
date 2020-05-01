@@ -2,7 +2,7 @@
   "name": "evd_pulse",
   "version": "1.0.0",
   "description": "Everyday Pulse Project",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "vue-cli-service serve",
