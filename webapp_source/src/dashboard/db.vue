@@ -24,7 +24,7 @@
                     <div class="h5 mb-2">5-Last Messurement</div>
                     <div class="p-3 hislog" v-for="log in Last5_BPMreverseSortedArray" :key="log.index">
                         <div class="d-inline-block h5 mb-0">{{ log[1] }} BPM</div>
-                        <div class="d-inline-block font-weight-light float-right">{{ log[0] | moment("D MMM YYYY &#8212 hh:mm A") }}</div>
+                        <div class="d-inline-block font-weight-light float-right">{{ log[0] | moment("D MMM YYYY - hh:mm A") }}</div>
                     </div>
                 </div>
                 <div class="col-8">
