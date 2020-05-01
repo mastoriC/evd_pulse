@@ -4,5 +4,7 @@ module.exports = {
     outputDir: path.resolve(__dirname, ".."),
     publicPath: process.env.NODE_ENV === 'production'
     ? '/evd_pulse/'
-    : '/'
+    : '/',
+    baseUrl: '/evd_pulse/'
+
 }
