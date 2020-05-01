@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from './index/Index.vue'
-import Dashboard from './dashboard/db.vue'
+const Index = () => import('./index/Index.vue')
+const Dashboard = () => import('./dashboard/db.vue')
 
 Vue.use(Router)
 
