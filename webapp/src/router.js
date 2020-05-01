@@ -7,8 +7,8 @@ const Dashboard = () => import('./dashboard/db.vue')
 Vue.use(Router)
 
 export const router = new Router ({
-    base: '/evd_pulse',
-    mode: 'hash',
+    mode: 'history',
+    base: process.env.BASE_URL,
     routes: [
         {path: '/', name: 'index', component: Index},
         {path: '/dashboard', name: 'dashboard', component: Dashboard},
