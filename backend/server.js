@@ -61,7 +61,7 @@ wss.on('connection', (ws) => {
                 console.log(`[Firebase] Update failed -> ${error}`)
             })
 
-            if(bpm) data.push(parseInt(bpm))
+            if(bpm) data.push(bpm)
 
             timeout = setTimeout(() => {
                 currentRef.set({ pulse: '-', bpm: '-' }).catch(error => {
