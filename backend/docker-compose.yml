@@ -1,0 +1,18 @@
+version: "3.6"
+services:
+  evdpulse_websocket:
+    container_name: evdpulse_websocket
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./serviceAccountKey.json:/usr/src/app/serviceAccountKey.json
+      - ./server.js:/usr/src/app/server.js
+    networks:
+      - backbone
+networks:
+  backbone:
+    name: backbone-net
