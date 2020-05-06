@@ -49,10 +49,10 @@
     transition: .4s;
 }
 .hover-color:hover {
-    color: hsl(185, 77%, 42%);
+    color: hsl(185, 65%, 40%);
 }
 .hover-color:active {
-    color: hsl(185, 77%, 42%);
+    color: hsl(185, 65%, 40%);
     transform: scale(0.925);
 }
 @keyframes slideIn {
@@ -117,3 +117,10 @@
     }
 }
 </style>
+<script>
+export default {
+    created() {
+        document.documentElement.style.overflow = 'hidden'
+    }
+}
+</script>

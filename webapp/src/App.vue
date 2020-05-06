@@ -4,10 +4,11 @@
     </div>
 </template>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap');
+
 body {
     cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    font-family: 'Sarabun', sans-serif;
 }
 .center-middle {
     position: absolute;
@@ -24,5 +25,17 @@ body {
 }
 .i-text-red {
     color: hsl(348, 83%, 47%);
+}
+
+.i-text-blue {
+    color: hsl(185, 90%, 50%);
+}
+
+.i-bg-dark {
+    background-color: #222;
+    color: #fff;
+}
+.i-text-grey {
+    color: #555;
 }
 </style>

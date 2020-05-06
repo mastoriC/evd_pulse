@@ -60,6 +60,7 @@ export default {
         }
     },
     mounted() {
+        document.documentElement.style.overflow = 'auto'
         let bpm_object = {}
 
         // History BPM 's Chart Components
