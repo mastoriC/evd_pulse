@@ -13,6 +13,12 @@
                 </div>
             </div>
         </div>
+        <div id="toInfo">
+            <router-link tag="div" to="/info" class="rounded-circle bg-white p-4 shadow hover-color">
+                <b-icon-bookmarks-fill class="h2 center-middle"></b-icon-bookmarks-fill>
+                <div class="p-2"></div>
+            </router-link>
+        </div>
         <div class="bg-decorate-white"></div>
         <div class="bg-decorate-red"></div>
     </div>
@@ -30,6 +36,37 @@
         letter-spacing: 8px;
     }
 }
+#toInfo {
+    position: absolute;
+    top: calc(100% - 16px);
+    left: calc(100% - 16px);
+    transform: translate(-100%, -100%);
+    animation: slideIn 3.5s;
+    transition: .4s;
+}
+.hover-color {
+    color: #333;
+    transition: .4s;
+}
+.hover-color:hover {
+    color: hsl(185, 77%, 42%);
+}
+.hover-color:active {
+    color: hsl(185, 77%, 42%);
+    transform: scale(0.925);
+}
+@keyframes slideIn {
+    0% {
+        left: calc(105%);
+    }
+    75% {
+        left: calc(105%);
+    }
+    100% {
+        left: calc(100% - 16px);
+    }
+}
+
 .bg-decorate-white {
     position: absolute;
     z-index: -1;
@@ -46,9 +83,9 @@
     height: 50%;
     bottom: 0;
     background: hsl(348, 83%, 47%);
-    animation: slideIn 2.5s ease-in-out;
+    animation: fillIn 2.5s ease-in-out;
 }
-@keyframes slideIn {
+@keyframes fillIn {
     from {
         left: 100%;
         border-bottom-left-radius: 1024px;
@@ -59,7 +96,7 @@
     }
 }
 #BPMbtn {
-    animation: fadeIn 4.5s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
     transition: .4s;
 }
 #BPMbtn:hover {
@@ -80,12 +117,3 @@
     }
 }
 </style>
-<script>
-export default {
-    data() {
-        return {
-            
-        }
-    }
-}
-</script>

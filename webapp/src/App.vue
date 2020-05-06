@@ -7,6 +7,7 @@
 body {
     cursor: default;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 .center-middle {
     position: absolute;
@@ -20,5 +21,8 @@ body {
 .i-bg-red {
     background-color: hsl(348, 83%, 47%);
     color: #fff;
+}
+.i-text-red {
+    color: hsl(348, 83%, 47%);
 }
 </style>
