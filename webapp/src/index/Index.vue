@@ -57,10 +57,10 @@
 }
 @keyframes slideIn {
     0% {
-        left: calc(105%);
+        left: calc(120%);
     }
     75% {
-        left: calc(105%);
+        left: calc(120%);
     }
     100% {
         left: calc(100% - 16px);

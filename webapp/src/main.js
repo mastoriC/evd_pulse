@@ -7,8 +7,16 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 
+import 'animate.css/animate.min.css'
+
 import moment from 'vue-moment'
 Vue.use(moment)
+
+import VueScrollTo from 'vue-scrollto'
+Vue.use(VueScrollTo, {
+    duration: 1000,
+})
+
 
 import firebase from 'firebase'
 var firebaseConfig = {
