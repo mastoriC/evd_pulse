@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-5 order-first order-lg-last embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pmwuIRbf-TE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QnOueVkFSsQ?rel=0" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
             </div>
         </div>
         <div class="container-fluid">
