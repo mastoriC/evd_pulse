@@ -9,7 +9,7 @@
 body {
     cursor: default;
     font-family: 'Kanit', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #333;
 }
 .center-middle {
