@@ -17,9 +17,9 @@
 - การวินิจฉัยทางการแพทย์มีประสิทธิภาพมากยิ่งขึ้น
 
 ### ดาวน์โหลด Poster
-[ไฟล์รูปภาพ (.png)](https://github.com/mastoriC/evd_pulse/blob/master/assets/EVD%20Pulse%20Poster.png) |
-[ไฟล์ Vector (.ai) สำหรับ print](https://github.com/mastoriC/evd_pulse/blob/master/assets/poster_cmyk_print.ai) |
-[ไฟล์ Vector (.pdf) สำหรับ print](https://github.com/mastoriC/evd_pulse/blob/master/assets/poster_cmyk_print.pdf)
+[ไฟล์รูปภาพ (.png)](https://github.com/mastoriC/evd_pulse/raw/master/assets/EVD%20Pulse%20Poster.png) |
+[ไฟล์ Vector (.ai) สำหรับ print](https://github.com/mastoriC/evd_pulse/raw/master/assets/poster_cmyk_print.ai) |
+[ไฟล์ Vector (.pdf) สำหรับ print](https://github.com/mastoriC/evd_pulse/raw/master/assets/poster_cmyk_print.pdf)
 
 ## ทีมสุดมหัศจรรย์
 |รหัสนักศึกษา| ชื่อ |Username|
