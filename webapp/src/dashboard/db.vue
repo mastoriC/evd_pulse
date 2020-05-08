@@ -1,12 +1,12 @@
 <template>
     <div>
-        <div class="container-fluid i-bg-red p-5">
+        <div class="container-fluid i-bg-red px-4 py-5 p-lg-5">
             <div class="h4 mb-0">Dashboard</div>
             <div class="row my-5">
-                <div class="col-7">
+                <div class="col-12 col-lg-7">
                     <canvas id="currentECG" width="100" height="15"></canvas>
                 </div>
-                <div class="col-5">
+                <div class="col-12 col-lg-5">
                     <div class="h3">Current Pulse</div>
                     <div v-if="current != '-'">
                         <span class="display-4">{{ current }}</span>
@@ -18,16 +18,16 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid p-5">
+        <div class="container-fluid px-4 py-5 p-lg-5">
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-lg-4">
                     <div class="h5 mb-2">5-Last Messurement</div>
                     <div class="p-3 hislog" v-for="log in Last5_BPMreverseSortedArray" :key="log.index">
                         <div class="d-inline-block h5 mb-0">{{ log[1] }} BPM</div>
                         <div class="d-inline-block font-weight-light float-right">{{ log[0] | moment("D MMM YYYY - hh:mm A") }}</div>
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-lg-8">
                     <canvas id="historyBPM"></canvas>
                 </div>
             </div>
