@@ -95,6 +95,7 @@
                 </div>
             </div>
         </div>
+        <div class="text-center small">ลองดูบน github &#8212 <a href="https://github.com/mastoriC/evd_pulse">github.com/mastoriC/evd_pulse</a></div>
         <div class="mx-3 my-5 m-lg-5 px-3 p-lg-5">
             <div class="h2 text-center mb-5">ทีมสุดมหัศจรรย์ของเรา</div>
             <div class="row">
